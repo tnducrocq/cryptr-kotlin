@@ -19,29 +19,29 @@ data class ChallengeResponse(
      */
     @SerialName("id_token") val idToken: String? = null,
 
-    @SerialName("refresh_retry") val refreshRetry: Int?,
-    @SerialName("refresh_leeway") val refreshLeeway: Int?,
+    @SerialName("refresh_retry") val refreshRetry: Int? = null,
+    @SerialName("refresh_leeway") val refreshLeeway: Int? = null,
     /**
      * Number of refresh made on these JWT tokens
      */
-    @SerialName("refresh_count") val refreshCount: Int?,
+    @SerialName("refresh_count") val refreshCount: Int? = null,
 
     /**
      * Associated oauth authorization unique identifier
      */
-    @SerialName("oauth_authorization_id") val oauthAuthorizationId: String?,
+    @SerialName("oauth_authorization_id") val oauthAuthorizationId: String? = null,
     /**
      * Unique identifier of the resource owner of these tokens
      */
-    @SerialName("resource_owner_id") val resourceOwnerId: String?,
+    @SerialName("resource_owner_id") val resourceOwnerId: String? = null,
     /**
      * Unique identifier of the Client ([Application])
      */
-    @SerialName("client_id") val clientId: String?,
+    @SerialName("client_id") val clientId: String? = null,
     /**
      * URL of the client
      */
-    @SerialName("client_url") val clientUrl: String?,
+    @SerialName("client_url") val clientUrl: String? = null,
     @SerialName("nonce") val nonce: String? = null,
     /** TEMP comment need to rollback asap **/
 //    @SerialName("nonce") val nonce: String?,
@@ -56,16 +56,16 @@ data class ChallengeResponse(
     /**
      * Type of token
      */
-    @SerialName("token_type") val tokenType: String?,
+    @SerialName("token_type") val tokenType: String? = null,
 
     /**
      * Expiration date as [String]
      */
-    @SerialName("expires_at") val expiresAt: String?,
+    @SerialName("expires_at") val expiresAt: String? = null,
     /**
      * Refresh expiration date (as [String])
      */
-    @SerialName("refresh_token_expires_at") val refreshTokenExpiresAt: String?,
+    @SerialName("refresh_token_expires_at") val refreshTokenExpiresAt: String? = null,
 ) : Tokenable {
     /**
      * Decode ID Token and retrieve its [JWTToken] if its valid
